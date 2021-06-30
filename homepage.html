@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Churn Prediction for International Customer plan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 40px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+
+input[type=text], .custom-select {
+width:100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+form, table{
+width:100%;
+}
+
+input[type=submit] {
+  background-color: #FB0000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 230px;
+
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+
+}
+
+.container {
+  border-radius: 5px;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+}
+
+.form_wrapper {
+  flex:1;
+  text-align: center;
+}
+label{
+color:white;
+}
+
+.col-label{
+width:25%;
+}
+
+
+
+</style>
+</head>
+<body>
+<h1> TELECOM CHURN DETECTION - INTERNATIONAL HOLDER</h1>
+<div class="container">
+  <form action="/send", name="send_data", method="post">
+      <table>
+<tr>
+    <td class="col-label"><label>International plan</label></td>
+   <td  class="col-input">
+        <select class="custom-select" name="international plan">
+            <option value=Internationalplan_yes>yes</option>
+            <option value=Internationalplan_no>no</option>
+        </select></td></tr>
+
+<tr>
+     <td  class="col-label"> <label>Voice mail plan</label></td>
+     <td  class="col-input">
+        <select class="custom-select" name="voice mail plan">
+            <option value=Voicemailplan_yes>yes</option>
+            <option value=Voicemailplan_no>no</option>
+        </select></td></tr>
+<tr>
+    <td  class="col-label">  <label>Voice Mail message</label></td>
+       <td  class="col-input">  <input type="text" name="number vmail messages" placeholder="number vmail messages"></td></tr>
+
+<tr>
+    <td  class="col-label">  <label>Total International Calls</label></td>
+       <td  class="col-input">  <input type="text" name="total intl calls" placeholder="total intl calls"></td></tr>
+
+
+<tr>
+     <td  class="col-label"> <label>Customer service calls option</label></td>
+     <td  class="col-input">
+        <select class="custom-select" name="customer service calls">
+            <option value="customer_call_0">0</option>
+            <option value="customer_call_1">1</option>
+            <option value="customer_call_2">2</option>
+             <option value="customer_call_3">3</option>
+            <option value="customer_call_4">4</option>
+            <option value="customer_call_5">5</option>
+            <option value="customer_call_6">6</option>
+             <option value="customer_call_7">7</option>
+            <option value="customer_call_8">8</option>
+            <option value="customer_call_9">9</option>
+        </select></td></tr>
+
+    <tr class="form_wrapper">
+     <td colspan='2'> <input id='submit' type="submit" value="Submit">Preict Churn</input></td>
+    </tr>
+</table>
+  </form>
+
+
+</div>
+
+</body>
+</html>
